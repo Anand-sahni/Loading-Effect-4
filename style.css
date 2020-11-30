@@ -1,0 +1,61 @@
+body {
+    height: 600px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #d9a7c7, #fffcdc);
+  }
+  
+  svg {
+    width: 400px;
+  }
+  
+  .stroke {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 4400 4400;
+    stroke-dashoffset: 4400; 
+    animation-name: loading;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .heart {
+    fill: #FF0000;
+    opacity: 0;
+    animation-name: vis;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  @keyframes loading {
+    0% {
+      stroke-dashoffset: 4400;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes vis {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
